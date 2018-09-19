@@ -1,0 +1,71 @@
+[{
+        "id": 0,
+        "title": "title0",
+        "price": 20.3,
+        "type": "red",
+        "declaration": "declaration0"
+    },
+    {
+        "id": 1,
+        "title": "title1",
+        "price": 120.5,
+        "type": "white",
+        "declaration": "declaration1"
+    },
+    {
+        "id": 2,
+        "title": "title2",
+        "price": 100,
+        "type": "red",
+        "declaration": "declaration1"
+    },
+    {
+        "id": 3,
+        "title": "title3",
+        "price": 80.5,
+        "type": "red",
+        "declaration": "declaration3"
+    },
+    {
+        "id": 4,
+        "title": "title4",
+        "price": 40,
+        "type": "white",
+        "declaration": "declaration4"
+    },
+    {
+        "id": 5,
+        "title": "title5",
+        "price": 400,
+        "type": "blue",
+        "declaration": "declaration5"
+    },
+    {
+        "id": 6,
+        "title": "title6",
+        "price": 150.5,
+        "type": "red",
+        "declaration": "declaration6"
+    },
+    {
+        "id": 7,
+        "title": "title7",
+        "price": 380.5,
+        "type": "blue",
+        "declaration": "declaration7"
+    },
+    {
+        "id": 8,
+        "title": "title8",
+        "price": 140,
+        "type": "white",
+        "declaration": "declaration8"
+    },
+    {
+        "id": 9,
+        "title": "title9",
+        "price": 700,
+        "type": "green",
+        "declaration": "Drink it and become viking"
+    }
+]

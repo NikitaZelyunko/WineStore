@@ -1,0 +1,30 @@
+div.wrapper {
+    position: relative;
+    width: 200px;
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 5px 10px 5px;
+    display: inline-block;
+    height: 250px;
+    vertical-align: top;
+}
+
+button.buy {
+    position: absolute;
+    right: 0;
+    width: 60px;
+    bottom: 0;
+}
+
+div.title {
+    font-weight: bold;
+}
+
+div.price {
+    position: relative;
+    text-align: right;
+}
+
+div.type {}
+
+div.declaration {}

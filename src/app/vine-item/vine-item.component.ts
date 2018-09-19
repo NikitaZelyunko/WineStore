@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../data.service';
+
+import { Vine } from '../Vine';
 
 @Component({
   selector: 'app-vine-item',
@@ -7,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VineItemComponent implements OnInit {
 
-  constructor() { }
+  vine: Vine  = null;
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private dataService: DataService) { }
 
   ngOnInit() {
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.dataService.getVine(id).subscribe(vine => {this.vine = vine; console.log(vine);  });
   }
 
 }
