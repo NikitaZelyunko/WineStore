@@ -54,6 +54,7 @@ export class ShopCartService {
     const item = this.storage_data[id];
     if (item != null) {
       if (item['count'] === 1) {
+        item['count'] = 0;
         this.delete(id);
       } else {
         item['count'] -= 1;

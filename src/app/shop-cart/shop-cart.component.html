@@ -1,6 +1,3 @@
-<p>
-    shop-cart works!
-</p>
 <table *ngIf="shopList.length">
     <tr>
         <th>Title</th>
@@ -15,5 +12,10 @@
         <td>{{item.count}}</td>
         <td><button (click)=remove(item)>-</button></td>
         <td>{{item.sum}}</td>
+        <td><button (click)=delete(item)>x</button></td>
+    </tr>
+    <tr>
+        <td>Total:</td>
+        <td [innerText]=total()></td>
     </tr>
 </table>

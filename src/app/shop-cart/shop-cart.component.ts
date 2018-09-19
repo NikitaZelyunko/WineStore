@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ShopCartService } from '../shop-cart.service';
-import { Vine } from '../Vine';
 
 @Component({
   selector: 'app-shop-cart',
@@ -20,7 +19,22 @@ export class ShopCartComponent implements OnInit {
   add(item: Object) {
     this.shopCartService.add(item);
   }
-  remove(item: Object, id: number) {
+
+  remove(item: Object) {
     this.shopCartService.remove(item['id']);
+    const index = this.shopList.indexOf(item);
+    if (this.shopList[index]['count'] === 0) {
+      this.shopList.splice(index, 1);
+    }
+  }
+
+  delete(item: Object) {
+    this.shopCartService.delete(item['id']);
+    const index = this.shopList.indexOf(item);
+    this.shopList.splice(index, 1);
+  }
+
+  total(): number {
+    return this.shopList.reduce((acc, item) => acc + item['sum'], 0);
   }
 }
