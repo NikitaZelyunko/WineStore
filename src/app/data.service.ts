@@ -23,7 +23,7 @@ export class DataService {
 
   getVine(id: number): Observable<Vine> {
     return this.http.get(url).pipe(map(
-      (vines: Array<Object>) => Vine.fromObject(vines.filter(
+      (vines: Array<Object>) => <Vine>(vines.filter(
         vine => vine['id'] === id)[0]))
       );
   }

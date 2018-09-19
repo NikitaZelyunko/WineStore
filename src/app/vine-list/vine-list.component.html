@@ -1,7 +1,7 @@
-<div *ngFor="let vine of vines" class="wrapper" (click)=goToVine(vine)>
+<div *ngFor="let vine of vines" class="wrapper" (click)=goToVine($event,vine)>
     <div class="title">{{vine.title}}</div>
     <div class="price">{{vine.price}}</div>
     <div class="type">{{vine.type}}</div>
     <div class="declaration">{{vine.declaration}}</div>
-    <button class="buy">BUY</button>
+    <button class="add" (click)=toCart(vine)>ADD</button>
 </div>

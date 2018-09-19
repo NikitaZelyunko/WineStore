@@ -16,10 +16,13 @@ export class Vine {
         this.declaration = declaration;
     }
 
-    static fromObject(object: Object) {
-        console.log(object);
-        const fields: Array<string> = ['id', 'title', 'price', 'type', 'declaration'];
-        const args = fields.map(field => object[field] !== undefined ? object[field] : null);
-        return Vine.apply(null, args);
+    toJSON(): Object {
+        return {
+            id: this.id,
+            title: this.title,
+            price: this.price,
+            type: this.type,
+            declaration: this.declaration
+        };
     }
 }

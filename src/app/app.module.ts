@@ -12,6 +12,7 @@ import { VineItemComponent } from './vine-item/vine-item.component';
 import { ShopCartComponent } from './shop-cart/shop-cart.component';
 
 import {DataService} from './data.service';
+import {ShopCartService} from './shop-cart.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import {DataService} from './data.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DataService],
+  providers: [DataService, ShopCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

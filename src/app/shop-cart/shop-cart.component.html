@@ -1,3 +1,19 @@
 <p>
-  shop-cart works!
+    shop-cart works!
 </p>
+<table *ngIf="shopList.length">
+    <tr>
+        <th>Title</th>
+        <th>Price(1 piece)</th>
+        <th>Count</th>
+        <th>Total</th>
+    </tr>
+    <tr *ngFor="let item of shopList">
+        <td>{{item.title}}</td>
+        <td>{{item.price}}</td>
+        <td><button (click)=add(item)>+</button></td>
+        <td>{{item.count}}</td>
+        <td><button (click)=remove(item)>-</button></td>
+        <td>{{item.sum}}</td>
+    </tr>
+</table>
